@@ -22,3 +22,13 @@ build:
     # http://devcenter.wercker.com/docs/steps/index.html
     steps:
         - bundle-install
+production-deploy:
+  steps:
+    - bundle-install:
+        jobs: 4
+    - script:
+        name: html code build
+        code: middleman build
+    - script:
+        name: deploy use ftp
+        code: middleman deploy
