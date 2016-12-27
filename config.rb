@@ -45,8 +45,8 @@ end
 
 activate :deploy do |deploy|
   deploy.deploy_method   = :ftp
-  deploy.host            = 'tom08.web.fc2.com'
-  deploy.path            = '/'
-  deploy.user            = 'tom08'
-  deploy.password        = 'T9f7!kg%If'
+  deploy.host            = ENV['FTP_HOST']
+  deploy.path            = ENV['FTP_PATH']
+  deploy.user            = ENV['FTP_USER']
+  deploy.password        = ENV['FTP_PASSWORD']
 end
