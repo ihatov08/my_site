@@ -32,3 +32,8 @@ production-deploy:
     - script:
         name: deploy use ftp
         code: middleman deploy
+  after-steps:
+    - slack-notifier:
+        url: https://hooks.slack.com/services/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
+        channel: hubot_rest
+        username: test_user
